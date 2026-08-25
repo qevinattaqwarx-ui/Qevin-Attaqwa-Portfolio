@@ -1,4 +1,3 @@
-```css
 /* =========================================================
    QEVIN ATTAQWA — PORTFOLIO
    Main Stylesheet
@@ -104,7 +103,7 @@ a {
 }
 
 .logo span {
-    color: #777;
+    color: #5b7cfa;
 }
 
 .nav-links {
@@ -121,7 +120,7 @@ a {
 }
 
 .nav-links a:hover {
-    color: #111;
+    color: #5b7cfa;
 }
 
 .nav-github {
@@ -133,8 +132,9 @@ a {
 }
 
 .nav-github:hover {
-    background: #171717;
-    color: #f5f5f2;
+    background: #5b7cfa;
+    border-color: #5b7cfa;
+    color: #ffffff;
 }
 
 
@@ -161,7 +161,7 @@ a {
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 0.16em;
-    color: #6b6b67;
+    color: #5b7cfa;
     margin-bottom: 25px;
 }
 
@@ -330,7 +330,7 @@ a {
    ========================================================= */
 
 .projects {
-   background: #e7eaf0;
+    background: #e7eaf0;
 }
 
 .project-card {
@@ -354,43 +354,25 @@ a {
 .featured-project {
     border-top: 3px solid #5b7cfa;
 }
+
+
+/* =========================================================
+   08. PROJECT IMAGE
+   ========================================================= */
+
 .project-image {
-
     min-height: 100%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     overflow: hidden;
-
-}
-.project-image {
-
-    min-height: 100%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
 }
 
 .project-image img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: contain;
-
     display: block;
-
 }
 
 .vendor-image {
@@ -408,10 +390,11 @@ a {
 .survey-image {
     background: #b7b7b1;
 }
+
 .image-placeholder {
     width: 75%;
     aspect-ratio: 16 / 10;
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -423,7 +406,7 @@ a {
 .customer-image .image-placeholder,
 .survey-image .image-placeholder {
     color: #171717;
-    border-color: rgba(0,0,0,0.2);
+    border-color: rgba(0, 0, 0, 0.2);
 }
 
 .image-placeholder span {
@@ -438,6 +421,11 @@ a {
     letter-spacing: -0.05em;
 }
 
+
+/* =========================================================
+   09. PROJECT CONTENT
+   ========================================================= */
+
 .project-content {
     padding: 55px;
     display: flex;
@@ -449,7 +437,7 @@ a {
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.15em;
-    color: #858580;
+    color: #5b7cfa;
     margin-bottom: 8px;
 }
 
@@ -460,11 +448,121 @@ a {
     letter-spacing: -0.05em;
 }
 
-.project-tools {
-    margin-top: 22px;
-    font-size: 12px;
-    font-weight: 800;
+
+/* =========================================================
+   10. PROJECT DIFFICULTY
+   ========================================================= */
+
+/*
+   Project difficulty
+   Example:
+   ★★★☆☆
+   ★★★★☆
+   ★★★★★
+*/
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.project-difficulty,
+.tech-stack {
+    border: 1px solid #d3d7df;
+    background: #f4f6f9;
+}
+
+
+/* Difficulty box */
+
+.project-difficulty {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 42px;
+    padding: 8px 13px;
+}
+
+.difficulty-label {
+    font-size: 11px;
+    font-weight: 700;
     color: #666;
+}
+
+.difficulty-stars {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #5b7cfa;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   11. TECH STACK
+   ========================================================= */
+
+/*
+   Tech Stack dibuat sebagai box terpisah
+   agar terlihat seperti metadata project,
+   bukan sekadar teks biasa.
+*/
+
+.tech-stack {
+    margin-top: 14px;
+    padding: 13px 15px;
+}
+
+.tech-stack-title {
+    display: block;
+    margin-bottom: 9px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #777;
+}
+
+.tech-stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tech-stack-list span {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 27px;
+    padding: 5px 9px;
+
+    background: #ffffff;
+    border: 1px solid #d5d8de;
+
+    font-size: 11px;
+    color: #444;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.tech-stack-list span:hover {
+    border-color: #5b7cfa;
+    color: #5b7cfa;
+    background: #f8f9ff;
+}
+
+
+/* =========================================================
+   12. PROJECT DESCRIPTION
+   ========================================================= */
+
+.project-tools {
+    display: none;
 }
 
 .project-content > p:not(.project-tools) {
@@ -473,6 +571,11 @@ a {
     color: #555;
     font-size: 15px;
 }
+
+
+/* =========================================================
+   13. PROJECT STATS
+   ========================================================= */
 
 .project-stats {
     display: grid;
@@ -503,6 +606,7 @@ a {
 .project-stats strong {
     font-size: 23px;
     letter-spacing: -0.04em;
+    color: #5b7cfa;
 }
 
 .project-stats span {
@@ -510,6 +614,11 @@ a {
     color: #777;
     margin-top: 3px;
 }
+
+
+/* =========================================================
+   14. PROJECT LINKS
+   ========================================================= */
 
 .project-links {
     margin-top: 28px;
@@ -521,11 +630,19 @@ a {
     font-weight: 800;
     border-bottom: 1px solid #171717;
     padding-bottom: 4px;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.project-links a:hover {
+    color: #5b7cfa;
+    border-color: #5b7cfa;
 }
 
 
 /* =========================================================
-   08. EXPERIENCE
+   15. EXPERIENCE
    ========================================================= */
 
 .timeline {
@@ -568,7 +685,7 @@ a {
 
 
 /* =========================================================
-   09. CERTIFICATIONS
+   16. CERTIFICATIONS
    ========================================================= */
 
 .certifications {
@@ -611,7 +728,7 @@ a {
 
 
 /* =========================================================
-   10. EDUCATION & PUBLICATION
+   17. EDUCATION & PUBLICATION
    ========================================================= */
 
 .education,
@@ -646,6 +763,7 @@ a {
     color: #666;
     font-size: 14px;
 }
+
 .publication-item + .publication-item {
     margin-top: 35px;
     padding-top: 35px;
@@ -659,8 +777,10 @@ a {
 .publication-item p {
     margin-top: 8px;
 }
+
+
 /* =========================================================
-   11. CONTACT
+   18. CONTACT
    ========================================================= */
 
 .contact {
@@ -699,6 +819,29 @@ a {
     padding-bottom: 7px;
 }
 
+.contact-email:hover {
+    color: #8da3ff;
+    border-color: #8da3ff;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px 30px;
+    margin-top: 35px;
+    color: #888;
+    font-size: 13px;
+}
+
+.contact-details a {
+    transition: color 0.25s ease;
+}
+
+.contact-details a:hover {
+    color: #f5f5f2;
+}
+
 .contact-links {
     display: flex;
     justify-content: center;
@@ -719,7 +862,7 @@ a {
 
 
 /* =========================================================
-   12. FOOTER
+   19. FOOTER
    ========================================================= */
 
 .footer {
@@ -738,7 +881,29 @@ a {
 
 
 /* =========================================================
-   13. RESPONSIVE — TABLET
+   20. JAVASCRIPT INTERACTIONS
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links a.active {
+    color: #171717;
+}
+
+
+/* =========================================================
+   21. RESPONSIVE — TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -796,7 +961,7 @@ a {
 
 
 /* =========================================================
-   14. RESPONSIVE — MOBILE
+   22. RESPONSIVE — MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -870,6 +1035,40 @@ a {
         font-size: 35px;
     }
 
+
+    /* -----------------------------------------
+       Project metadata — mobile
+       ----------------------------------------- */
+
+    .project-meta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .project-difficulty {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .tech-stack {
+        width: 100%;
+    }
+
+    .tech-stack-list {
+        gap: 6px;
+    }
+
+    .tech-stack-list span {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+
+    /* -----------------------------------------
+       Project stats — mobile
+       ----------------------------------------- */
+
     .project-stats {
         grid-template-columns: 1fr;
     }
@@ -885,6 +1084,11 @@ a {
         border-bottom: 0;
     }
 
+
+    /* -----------------------------------------
+       Timeline — mobile
+       ----------------------------------------- */
+
     .timeline-item {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -895,14 +1099,29 @@ a {
         font-size: 28px;
     }
 
+
+    /* -----------------------------------------
+       Certifications — mobile
+       ----------------------------------------- */
+
     .certification-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* -----------------------------------------
+       Education & publication — mobile
+       ----------------------------------------- */
 
     .education-content h3,
     .publication-content h3 {
         font-size: 21px;
     }
+
+
+    /* -----------------------------------------
+       Contact — mobile
+       ----------------------------------------- */
 
     .contact h2 {
         font-size: 70px;
@@ -913,67 +1132,18 @@ a {
         word-break: break-word;
     }
 
+    .contact-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    /* -----------------------------------------
+       Footer — mobile
+       ----------------------------------------- */
+
     .footer-container {
         flex-direction: column;
         gap: 8px;
     }
-}
-/* =========================================================
-   15. COOL ACCENT
-   ========================================================= */
-
-.logo span {
-    color: #5b7cfa;
-}
-
-.eyebrow {
-    color: #5b7cfa;
-}
-
-.project-number {
-    color: #5b7cfa;
-}
-
-.project-stats strong {
-    color: #5b7cfa;
-}
-
-.project-links a:hover {
-    color: #5b7cfa;
-    border-color: #5b7cfa;
-}
-
-.nav-links a:hover {
-    color: #5b7cfa;
-}
-
-.nav-github:hover {
-    background: #5b7cfa;
-    border-color: #5b7cfa;
-    color: #ffffff;
-}
-
-.contact-email:hover {
-    color: #8da3ff;
-    border-color: #8da3ff;
-}
-/* =========================================================
-   15. JAVASCRIPT INTERACTIONS
-   ========================================================= */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-}
-
-.reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.nav-links a.active {
-    color: #171717;
 }
